@@ -3,37 +3,38 @@ import axios from '../../node_modules/axios'
 import ArticleCards from './ArticleCards'
 
 export default function ArticleList() {
-    // creating useState
-    const fullDate = new Date();
-    const day = fullDate.getDate();
-    const month = fullDate.getMonth() + 1;
-    const year = fullDate.getFullYear();
-    const today = year + '-' + month + '-' + day;
-
-    const [apod, setApod] = useState([]);
-    const [date, setDate] = useState(`${today}`);
     
-    console.log('Today',today);
+    // CREATING NON-STATIC DATES
+    const 
+    fullDate = new Date(),
+    day = fullDate.getDate(),
+    month = fullDate.getMonth() + 1,
+    year = fullDate.getFullYear(),
+    today = year + '-' + month + '-' + day;
 
-
-    const x = Math.floor((Math.random())*11) + 1;
-    console.log(x <= 12);
-    console.log('Month', x);
+    // CREATING USESTATE
+    const 
+    [apod, setApod] = useState([]),
+    [date, setDate] = useState(`${today}`);
+    
+    // CREATING MONTH RANDOMIZER
+    const mm = Math.floor((Math.random())*11) + 1;
+    
+    // CREATING DAY RANDOMIZER BASED ON MONTH
     let num = 30;
-    if(x === 2){
+    if(mm === 2){
         num = 28
-    }else if(x === 4 || 6 || 9 || 11){
+    }else if(mm === 4 || 6 || 9 || 11){
         num = 30
     }
-    const y = Math.floor((Math.random())*num) + 1;
-    console.log(y <= 31);
-    console.log('Day', y);
+    const dd = Math.floor((Math.random())*num) + 1;
     
-    const z = 2019;
-    console.log('Year', z);
-
-    const newDate = z + '-' + x + '-' + y;
-    console.log('Date', newDate)
+    // SETTING YEAR TO 2018
+    const yyyy = 2018;
+    
+    // CREATING FULL DATE FORMAT
+    const newDate = yyyy + '-' + mm + '-' + dd;
+    
     
 
     useEffect(() => {
