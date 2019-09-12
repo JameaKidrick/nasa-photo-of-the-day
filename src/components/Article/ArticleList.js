@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../../node_modules/axios'
-import ArticleCards from './ArticleCards'
+import axios from 'axios'
+import ArticleCards from '../Article/ArticleCards'
 
 export default function ArticleList() {
     
@@ -71,6 +71,7 @@ export default function ArticleList() {
                 <button className='dateRandom' onClick={() => setDate(newDate)}>
                     Random
                 </button>
+                {/* <input type='date'min=></input> */}
             </div>
         </div>
     )
