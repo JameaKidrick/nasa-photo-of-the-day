@@ -2,7 +2,6 @@ import React from 'react';
 
 const ArticleCards = props => {
     return(
-        
         <div className='article-card' key={props.index}>
             <h2>{props.title}</h2>
             <p className='date'>Date: {props.date}</p>

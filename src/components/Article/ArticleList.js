@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import ArticleCards from '../Article/ArticleCards'
+import Carousel from '../Header/Carousel'
 
 export default function ArticleList() {
     
@@ -57,13 +58,23 @@ export default function ArticleList() {
             <div className='article'>
                 {apod.map((item, index) => {
                     return (
-                        <ArticleCards 
-                        key={index}
-                        title={item.title}
-                        date={item.date}
-                        url={item.url}
-                        explanation={item.explanation}
-                        copyright={item.copyright}/>
+                        <>
+                            <ArticleCards 
+                            key={index}
+                            title={item.title}
+                            date={item.date}
+                            url={item.url}
+                            explanation={item.explanation}
+                            copyright={item.copyright}/>
+
+                            <Carousel
+                            key={index}
+                            title={item.title}
+                            date={item.date}
+                            url={item.url}
+                            explanation={item.explanation}
+                            copyright={item.copyright}/>
+                        </>
                     )
                 })}
             </div>
