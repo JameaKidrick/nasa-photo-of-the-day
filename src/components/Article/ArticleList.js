@@ -5,9 +5,9 @@ import Carousel from '../Header/Carousel'
 import PicOfDay from '../Article/PicOfDay'
 import styled from '../../../node_modules/styled-components'
 
-const Title = styled.h1`
-    border:2px solid red;
-    margin-top: 30px;
+const RandomBtn = styled.button`
+    border: 2px solid red;
+    margin: 20px 0;
 `
 
 
@@ -63,6 +63,11 @@ export default function ArticleList() {
     return(
         
         <div className='container'>
+            <div className='randomArticle'>
+                <RandomBtn className='dateRandom' onClick={() => setDate(newDate)}>
+                    Random
+                </RandomBtn>
+            </div>
             <div className='article'>
                 {apod.map((item, index) => {
                     return (
@@ -89,12 +94,6 @@ export default function ArticleList() {
                         </>
                     )
                 })}
-            </div>
-            <div className='randomArticle'>
-                <button className='dateRandom' onClick={() => setDate(newDate)}>
-                    Random
-                </button>
-                {/* <input type='date'min=></input> */}
             </div>
         </div>
     )
