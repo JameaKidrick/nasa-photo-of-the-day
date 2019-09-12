@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import ArticleCards from '../Article/ArticleCards'
 import Carousel from '../Header/Carousel'
+import PicOfDay from '../Article/PicOfDay'
 
 export default function ArticleList() {
     
@@ -54,12 +55,22 @@ export default function ArticleList() {
     return(
         
         <div className='container'>
-            <h1>ArticleList</h1>
+            <h1>ASTRONOMY PICTURE OF THE DAY</h1>
             <div className='article'>
                 {apod.map((item, index) => {
                     return (
                         <>
-                            <ArticleCards 
+                            <Carousel/>
+
+                            {/* <ArticleCards 
+                            key={index}
+                            title={item.title}
+                            date={item.date}
+                            url={item.url}
+                            explanation={item.explanation}
+                            copyright={item.copyright}/> */}
+
+                            <PicOfDay
                             key={index}
                             title={item.title}
                             date={item.date}
@@ -67,13 +78,7 @@ export default function ArticleList() {
                             explanation={item.explanation}
                             copyright={item.copyright}/>
 
-                            <Carousel
-                            key={index}
-                            title={item.title}
-                            date={item.date}
-                            url={item.url}
-                            explanation={item.explanation}
-                            copyright={item.copyright}/>
+                            
                         </>
                     )
                 })}

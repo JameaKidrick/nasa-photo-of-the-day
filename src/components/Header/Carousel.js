@@ -6,6 +6,7 @@ import {
     CarouselIndicators,
     CarouselCaption
 } from '../../../node_modules/reactstrap';
+import Collapse from '../Collapse/Collapse'
 
 const items = [
     {
@@ -28,7 +29,7 @@ const items = [
     }
 ];
 
-class Example extends Component {
+class CarouselComponent extends Component {
     constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -90,10 +91,11 @@ class Example extends Component {
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        <Collapse />
         </Carousel>
     );
     }
 }
 
 
-export default Example;
+export default CarouselComponent;
