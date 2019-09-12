@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import ArticleList from './components/Article/ArticleList'
+import NavBar from './components/Navigation/NavBar'
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <ArticleList />
-    </div>
+    <>
+      <div className="App">
+        <NavBar />
+        <ArticleList />
+      </div>
+    </>
   );
 }
 
