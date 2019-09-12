@@ -7,10 +7,6 @@ import {
     CarouselCaption
 } from '../../../node_modules/reactstrap';
 import Collapse from '../Collapse/Collapse'
-import styled from '../../../node_modules/styled-components'
-
-
-
 
 const items = [
     {
@@ -95,7 +91,7 @@ class CarouselComponent extends Component {
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-        <Collapse />
+        {/* <Collapse /> */}
         </Carousel>
     );
     }

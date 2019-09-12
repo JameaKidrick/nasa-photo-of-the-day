@@ -3,6 +3,14 @@ import axios from 'axios'
 import ArticleCards from '../Article/ArticleCards'
 import Carousel from '../Header/Carousel'
 import PicOfDay from '../Article/PicOfDay'
+import styled from '../../../node_modules/styled-components'
+
+const Title = styled.h1`
+    border:2px solid red;
+    margin-top: 30px;
+`
+
+
 
 export default function ArticleList() {
     
@@ -55,12 +63,11 @@ export default function ArticleList() {
     return(
         
         <div className='container'>
-            <h1>ASTRONOMY PICTURE OF THE DAY</h1>
             <div className='article'>
                 {apod.map((item, index) => {
                     return (
                         <>
-                            <Carousel/>
+                            {/* <Carousel/> */}
 
                             {/* <ArticleCards 
                             key={index}
