@@ -1,3 +1,5 @@
+// COMPONENT MADE DAY 1; COMPONENT REPLACED WITH PICOFTHEDAY.JS
+
 import React from 'react';
 
 const ArticleCards = props => {
@@ -14,3 +16,5 @@ const ArticleCards = props => {
 }
 
 export default ArticleCards;
+
+// COMPONENT MADE DAY 1; COMPONENT REPLACED WITH PICOFTHEDAY.JS

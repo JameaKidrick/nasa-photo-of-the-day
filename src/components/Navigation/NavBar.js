@@ -1,5 +1,18 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import styled from '../../../node_modules/styled-components'
+
+const NavbarName = styled.div`
+    color: white;
+    font-size: 30px;
+`
+const Link = styled.div`
+    color: white;
+`
+const NavbarTogglerH = styled.button`
+    width: 30px;
+`
+
 
 export default class Example extends React.Component {
     constructor(props) {
@@ -19,16 +32,16 @@ export default class Example extends React.Component {
     render() {
         return (
         <div>
-            <Navbar color="faded" light>
-            <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+            <Navbar color="dark" light>
+            <NavbarName href="/" className="mr-auto">NASA</NavbarName>
+            <NavbarTogglerH onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                 <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
+                    <Link href="/components/">Components</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                    <Link href="https://github.com/reactstrap/reactstrap">GitHub</Link>
                 </NavItem>
                 </Nav>
             </Collapse>

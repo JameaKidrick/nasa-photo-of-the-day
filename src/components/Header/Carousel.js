@@ -7,6 +7,10 @@ import {
     CarouselCaption
 } from '../../../node_modules/reactstrap';
 import Collapse from '../Collapse/Collapse'
+import styled from '../../../node_modules/styled-components'
+
+
+
 
 const items = [
     {
