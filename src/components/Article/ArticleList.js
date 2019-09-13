@@ -6,8 +6,12 @@ import PicOfDay from '../Article/PicOfDay'
 import styled from '../../../node_modules/styled-components'
 
 const RandomBtn = styled.button`
-    border: 2px solid red;
+    border: none;
     margin: 20px 0;
+    border-radius: 5px;
+    padding: 8px;
+    background: rgb(108,117,125);
+    color: white;
 `
 
 
@@ -65,7 +69,7 @@ export default function ArticleList() {
         <div className='container'>
             <div className='randomArticle'>
                 <RandomBtn className='dateRandom' onClick={() => setDate(newDate)}>
-                    Random
+                    Random APOD
                 </RandomBtn>
             </div>
             <div className='article'>

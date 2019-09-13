@@ -12,7 +12,7 @@ const POD= (props) => {
       <Card>
         <h2>Astronomy Picture of the Day</h2>
         <CardText>{props.date}</CardText>
-        <CardImg top width="100%" src={props.url} alt="Card image cap" />
+        <CardImg top width="50%" src={props.url} alt="Card image cap" />
         <CardBody>
           <CardTitle>
             <h3>{props.title}</h3>
