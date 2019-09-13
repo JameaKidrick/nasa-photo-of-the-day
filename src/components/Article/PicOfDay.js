@@ -17,7 +17,7 @@ const POD= (props) => {
           <CardTitle>
             <h3>{props.title}</h3>
           </CardTitle>
-          <Button onClick = {() => setClose(!close)}>Press Me!</Button>
+          <Button onClick = {() => setClose(!close)}>Read More</Button>
           <Collapse isOpen={close}>
             <CardText>{props.explanation}</CardText>
             <CardText>
