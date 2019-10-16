@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import ArticleCards from '../Article/ArticleCards'
-import Carousel from '../Header/Carousel'
+// import ArticleCards from '../Article/ArticleCards'
+// import Carousel from '../Header/Carousel'
 import PicOfDay from '../Article/PicOfDay'
 import styled from '../../../node_modules/styled-components'
 
