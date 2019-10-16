@@ -1,23 +1,10 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 import styled from '../../../node_modules/styled-components'
 
-
-const NavbarName = styled.div`
-    color: white;
-    font-size: 30px;
-`
-const Link = styled.div`
-    color: white;
-`
-const NavbarTogglerH = styled.button`
-    width: 30px;
-`
-
 const Logo = styled.img`
-    width: 80px;
+    width: 100px;
 `
-
 
 export default class Example extends React.Component {
     constructor(props) {
@@ -37,17 +24,16 @@ export default class Example extends React.Component {
     render() {
         return (
         <div>
-            <Navbar color="dark" light>
+            <Navbar color="dark" dark>
             <Logo src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png' alt='NASA logo'></Logo>
-            {/* <NavbarName href="/" className="mr-auto">NASA</NavbarName> */}
-            <NavbarTogglerH onClick={this.toggleNavbar} className="mr-2" />
+            <NavbarToggler style={{outline:'none'}} onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                 <NavItem>
-                    <Link href="https://jameakidrick.netlify.com/">Portfolio</Link>
+                    <NavLink style={{color:'white', fontSize:'1.2rem'}} href="https://jameakidrick.netlify.com/">Portfolio</NavLink>
                 </NavItem>
                 <NavItem>
-                    <Link href="https://github.com/JameaKidrick">GitHub</Link>
+                    <NavLink style={{color:'white', fontSize:'1.2rem'}} href="https://github.com/JameaKidrick">GitHub</NavLink>
                 </NavItem>
                 </Nav>
             </Collapse>

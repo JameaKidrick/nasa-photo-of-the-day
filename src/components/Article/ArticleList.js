@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-// import ArticleCards from '../Article/ArticleCards'
-// import Carousel from '../Header/Carousel'
-import PicOfDay from '../Article/PicOfDay'
-import styled from '../../../node_modules/styled-components'
+import axios from 'axios';
+// import Carousel from '../Header/Carousel';
+import PicOfDay from '../Article/PicOfDay';
+import styled from '../../../node_modules/styled-components';
 
 const RandomBtn = styled.button`
     border: none;
@@ -13,8 +12,6 @@ const RandomBtn = styled.button`
     background: rgb(108,117,125);
     color: white;
 `
-
-
 
 export default function ArticleList() {
     
@@ -48,8 +45,6 @@ export default function ArticleList() {
     
     // CREATING FULL DATE FORMAT
     const newDate = yyyy + '-' + mm + '-' + dd;
-    
-    
 
     useEffect(() => {
         axios
@@ -68,7 +63,7 @@ export default function ArticleList() {
         
         <div className='container'>
             <div className='randomArticle'>
-                <RandomBtn className='dateRandom' onClick={() => setDate(newDate)}>
+                <RandomBtn style={{outline:'none'}} className='dateRandom' onClick={() => setDate(newDate)}>
                     Random APOD
                 </RandomBtn>
             </div>
@@ -78,14 +73,6 @@ export default function ArticleList() {
                         <>
                             {/* <Carousel/> */}
 
-                            {/* <ArticleCards 
-                            key={index}
-                            title={item.title}
-                            date={item.date}
-                            url={item.url}
-                            explanation={item.explanation}
-                            copyright={item.copyright}/> */}
-
                             <PicOfDay
                             key={index}
                             title={item.title}
@@ -93,8 +80,6 @@ export default function ArticleList() {
                             url={item.url}
                             explanation={item.explanation}
                             copyright={item.copyright}/>
-
-                            
                         </>
                     )
                 })}
